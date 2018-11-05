@@ -1,3 +1,8 @@
 {
-    "HELLO": "привет {{value}}"
+    "HELLO": "привет {{value}}",
+    "LOGIN": "Войти",
+    "REGISTER": "Регистрация",
+    "LOGOUT": "Выйти",
+    "USERNAME": "Имя пользователя",
+    "PASSWORD": "Пароль"
 }

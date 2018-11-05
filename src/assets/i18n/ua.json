@@ -2,5 +2,10 @@
     "OPTION_SELECT": "Виберіть опцію",
     "FIRST_OPT": "Перша опція",
     "SECOND_OPT": "Друга опція",
-    "THIRD_OPT": "Третя опція"
+    "THIRD_OPT": "Третя опція",
+    "LOGIN": "Увійти",
+    "REGISTER": "Реєстрація",
+    "LOGOUT": "Вийти",
+    "USERNAME": "Ім’я користувача",
+    "PASSWORD": "Пароль"
 }
