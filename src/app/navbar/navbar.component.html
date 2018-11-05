@@ -18,9 +18,9 @@
     <button (click)="setLang('ru')" class="btn">RU</button>
     <button (click)="setLang('en')" class="btn">EN</button>
     <ul class="navbar-nav">
-      <a class="nav-link" routerLink="/login" routerLinkActive="active">{{ 'LOGIN' | translate}}</a>
-      <a class="nav-link" routerLink="/register" routerLinkActive="active">{{ 'REGISTER' | translate}}</a>
-      <a class="nav-link" style="cursor:pointer">{{ 'LOGOUT' | translate}}</a>
+      <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active">{{ 'LOGIN' | translate}}</a>
+      <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/register" routerLinkActive="active">{{ 'REGISTER' | translate}}</a>
+      <a class="nav-link" *ngIf="_authService.loggedIn()"  (click)="_authService.logoutUser()" style="cursor:pointer">{{ 'LOGOUT' | translate}}</a>
     </ul>
   </div>
 </nav>
