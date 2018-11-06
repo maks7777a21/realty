@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +11,8 @@ export class NavbarComponent {
 
   param = {value: 'world'};
 
-  constructor( public translate: TranslateService) {
+  constructor( public translate: TranslateService, 
+    private _authService: AuthService) {
       // this language will be used as a fallback when a translation isn't found in the current language
       translate.setDefaultLang('ua');
 

@@ -1,30 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="#">rlt.com.ua</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="btn-group" dropdown>
-      <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-              aria-controls="dropdown-basic">
-              {{ 'OPTION_SELECT' | translate}} <span class="caret"></span>
-      </button>
-      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
-          role="menu" aria-labelledby="button-basic">
-        <li role="menuitem"><a class="dropdown-item" href="#">{{ 'FIRST_OPT' | translate}}</a></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">{{ 'SECOND_OPT' | translate }}</a></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">{{ 'THIRD_OPT' | translate }}</a></li>
-        <li class="divider dropdown-divider"></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-        </li>
-      </ul>
-    </div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/special" routerLinkActive="active">Members</a>
+      </li>
+    </ul>
     <button (click)="setLang('ua')" class="btn">UA</button>
+    <button (click)="setLang('ru')" class="btn">RU</button>
     <button (click)="setLang('en')" class="btn">EN</button>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <ul class="navbar-nav">
+      <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active">{{ 'LOGIN' | translate}}</a>
+      <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/register" routerLinkActive="active">{{ 'REGISTER' | translate}}</a>
+      <a class="nav-link" *ngIf="_authService.loggedIn()"  (click)="_authService.logoutUser()" style="cursor:pointer">{{ 'LOGOUT' | translate}}</a>
+    </ul>
   </div>
 </nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

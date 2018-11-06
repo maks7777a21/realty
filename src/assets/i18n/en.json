@@ -2,5 +2,10 @@
     "OPTION_SELECT": "Option select",
     "FIRST_OPT": "First option",
     "SECOND_OPT": "Second option",
-    "THIRD_OPT": "Third option"
+    "THIRD_OPT": "Third option",
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "LOGOUT": "Logout",
+    "USERNAME": "Username",
+    "PASSWORD": "Password"
 }
