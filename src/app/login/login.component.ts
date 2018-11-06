@@ -30,12 +30,13 @@ export class LoginComponent implements OnInit {
           console.log(res);
         },
         err => {
-          this.translate.get('INVALID_CREDENTIALS').subscribe((res: string) => {
-            console.log(res);
-            this._notifier.notify('error', res);
-          });
-          
-          console.log(err);
+          if (err.error === 'Invalid credentials') {
+            this.translate.get('INVALID_CREDENTIALS').subscribe((res: string) => {
+              this._notifier.notify('error', res);
+            });
+          } else {
+            console.log(err);
+          }
         }
       );
   }
