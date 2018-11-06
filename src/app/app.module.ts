@@ -16,6 +16,7 @@ import { AuthService } from './auth.service';
 import { EventService } from './event.service';
 import { AuthGuard } from './auth.guard';
 import {TokenInterceptorService } from './token-interceptor.service';
+import { NotifierModule } from 'angular-notifier';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -43,7 +44,8 @@ export function HttpLoaderFactory(http: HttpClient) {
           deps: [HttpClient]
       }
     }),
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    NotifierModule,
   ],
   providers: [AuthService, AuthGuard, EventService,
   {

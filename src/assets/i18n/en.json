@@ -7,5 +7,6 @@
     "REGISTER": "Register",
     "LOGOUT": "Logout",
     "USERNAME": "Username",
-    "PASSWORD": "Password"
+    "PASSWORD": "Password",
+    "INVALID_CREDENTIALS": "Incorrect username or password."
 }

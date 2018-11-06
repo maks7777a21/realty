@@ -7,5 +7,6 @@
     "REGISTER": "Реєстрація",
     "LOGOUT": "Вийти",
     "USERNAME": "Ім’я користувача",
-    "PASSWORD": "Пароль"
+    "PASSWORD": "Пароль",
+    "INVALID_CREDENTIALS": "Неправильне ім’я користувача або пароль."
 }

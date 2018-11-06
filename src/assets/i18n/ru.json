@@ -4,5 +4,6 @@
     "REGISTER": "Регистрация",
     "LOGOUT": "Выйти",
     "USERNAME": "Имя пользователя",
-    "PASSWORD": "Пароль"
+    "PASSWORD": "Пароль",
+    "INVALID_CREDENTIALS": "Неверное имя пользователя или пароль."
 }
