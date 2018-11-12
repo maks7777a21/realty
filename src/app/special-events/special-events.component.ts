@@ -11,7 +11,8 @@ import { AuthService } from '../auth.service';
 })
 export class SpecialEventsComponent implements OnInit {
   specialEvents = [];
-  constructor(private _eventService: EventService,
+  constructor(
+    private _eventService: EventService,
     private _router: Router,
     private _authService: AuthService) { }
 
@@ -19,11 +20,11 @@ export class SpecialEventsComponent implements OnInit {
     this._eventService.getSpecialEvents()
       .subscribe(
         res => this.specialEvents = res,
-        err => {
+        err => { debugger;
           if (err instanceof HttpErrorResponse){
             if (err.status === 401){
-              this._router.navigate(['/login']);
               this._authService.logoutUser();
+              this._router.navigate(['/login']);
             }
           }
         }
